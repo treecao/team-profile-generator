@@ -13,7 +13,6 @@ const startProgram = () =>{
             name: 'name',
             message: "Add more team members",
             choices: ["Add Engineer","Add Intern", "Done adding folks"] 
-            
         }
     ]).then(response => {
         console.log(response)
@@ -70,26 +69,22 @@ const addManager = () =>{
         {
             type: 'input',
             name: 'name',
-            message: "Add a Manager",
+            message: "Input Manager's Name: ",
         },
         {
             type: 'input',
             name: 'id',
-            message: "Add an id number",            
+            message: "Input Manager's ID #: ",            
         },
         {
             type: 'input',
             name: 'email',
-            message: "Add an email address",
-            
-            
+            message: "Input Manager's Email: ",
         },
         {
             type: 'input',
-           name: 'officeNumber',
-            message: "Add an office number",
-            
-            
+            name: 'officeNumber',
+            message: "Input Manager's Office Number:",            
         }
     ]).then(response => {
         const newHire = new Manager(response.name,response.id,response.email,response.officeNumber)
@@ -107,24 +102,22 @@ const addEngineer = () =>{
         {
             type: 'input',
             name: 'name',
-            message: "Add an Engineer",
+            message: "Input Engineer's Name: ",
         },
         {
             type: 'input',
             name: 'id',
-            message: "Add an id number",            
+            message: "Input Engineer's ID #: ",            
         },
         {
             type: 'input',
             name: 'email',
-            message: "Add an email address",
-            
-            
+            message: "Input Engineer's Email Address: ",
         },
         {
             type: 'input',
             name: 'github',
-            message: "Add a Github username",
+            message: "Input Github Username: ",
         }
     ]).then(response => {
         const newHire = new Engineer(response.name,response.id,response.email,response.github)
@@ -140,24 +133,22 @@ const addIntern = () =>{
         {
             type: 'input',
             name: 'name',
-            message: "Add an Intern",
+            message: "Input Intern's Name: ",
         },
         {
             type: 'input',
             name: 'id',
-            message: "Add an id number",            
+            message: "Input Intern's ID #: ",            
         },
         {
             type: 'input',
             name: 'email',
-            message: "Add an email address",
-            
-            
+            message: "Input Intern's Email Address: ",            
         },
         {
             type: 'input',
             name: 'school',
-            message: "Add a School",
+            message: "Input Intern's School: ",
         }
     ]).then(response => {
         const newHire = new Intern(response.name,response.id,response.email,response.school)
