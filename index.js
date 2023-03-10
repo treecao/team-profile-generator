@@ -5,7 +5,8 @@ const Manager = require('./lib/Manager');
 const Intern = require('./lib/Intern');
 const fs = require('fs');
 let empArry = []
-//start program executiont
+
+//start program execution
 const startProgram = () =>{
     inquirer.prompt ([
         {
