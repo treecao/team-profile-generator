@@ -4,6 +4,7 @@ const Engineer = require('./lib/Engineer');
 const Manager = require('./lib/Manager');
 const Intern = require('./lib/Intern');
 const fs = require('fs');
+// const generateHTML = require('./generateHTML');
 let empArry = []
 
 //start program execution
@@ -12,8 +13,8 @@ const startProgram = () =>{
         {
             type: 'list',
             name: 'name',
-            message: "Add more team members",
-            choices: ["Add Engineer","Add Intern", "Done adding folks"] 
+            message: "Would you like to add more team members?",
+            choices: ["Add Engineer","Add Intern", "No. Generate HTML"] 
         }
     ]).then(response => {
         console.log(response)
@@ -24,11 +25,11 @@ const startProgram = () =>{
             case "Add Intern": 
                 addIntern();
                 break;
-            case "Done adding folks": 
+            case "No. Generate HTML": 
                 buildTeam();
                 break;
             default:
-                 generateHTML()
+                 generateHTML();
             }
         }
     )
